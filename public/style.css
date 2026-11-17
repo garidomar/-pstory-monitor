@@ -1,0 +1,191 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #10131b;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    gap: 15px;
+}
+
+.header h1 {
+    color: #55d68b;
+    font-size: 28px;
+}
+
+.header p {
+    color: #9299a8;
+    margin-top: 8px;
+}
+
+.status {
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.online {
+    background: #153d2b;
+    color: #55d68b;
+}
+
+.offline {
+    background: #421e25;
+    color: #ff7373;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card,
+.panel {
+    background: #1b202c;
+    border: 1px solid #2b3342;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.card span {
+    color: #9299a8;
+    font-size: 14px;
+}
+
+.card strong {
+    display: block;
+    font-size: 35px;
+    margin-top: 15px;
+}
+
+.online-card strong {
+    color: #55d68b;
+}
+
+.panel {
+    margin-bottom: 20px;
+}
+
+.panel h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+button {
+    background: #249e62;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #32bd79;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#message,
+.last-update,
+.empty {
+    color: #aab1c0;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #2b3342;
+}
+
+th {
+    color: #55d68b;
+}
+
+td {
+    color: #d5d9e2;
+}
+
+td:last-child,
+th:last-child {
+    text-align: right;
+}
+
+pre {
+    background: #10131b;
+    color: #55d68b;
+    padding: 18px;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+    font-size: 12px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+footer {
+    text-align: center;
+    color: #727b8c;
+    font-size: 12px;
+    padding: 25px 0;
+}
+
+@media (max-width: 650px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .panel-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

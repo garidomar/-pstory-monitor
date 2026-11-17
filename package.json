@@ -1,0 +1,13 @@
+
+{
+  "name": "pstory-monitor",
+  "version": "1.0.0",
+  "description": "Monitor de jogadores do servidor PStory",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

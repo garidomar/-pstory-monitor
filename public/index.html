@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PStory Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container">
+
+    <header class="header">
+        <div>
+            <h1>⚔ PStory Monitor</h1>
+            <p>Monitoramento do servidor em tempo real</p>
+        </div>
+
+        <div id="status" class="status offline">
+            Desconectado
+        </div>
+    </header>
+
+    <section class="cards">
+
+        <div class="card online-card">
+            <span>Jogadores Online</span>
+            <strong id="online">--</strong>
+        </div>
+
+        <div class="card">
+            <span>Capacidade Máxima</span>
+            <strong id="capacity">--</strong>
+        </div>
+
+        <div class="card">
+            <span>Recorde de Jogadores</span>
+            <strong id="record">--</strong>
+        </div>
+
+    </section>
+
+    <section class="panel">
+
+        <div class="panel-header">
+            <h2>Conexão com o servidor</h2>
+
+            <button id="refresh" type="button">
+                ↻ Atualizar agora
+            </button>
+        </div>
+
+        <p id="message">Aguardando primeira consulta...</p>
+
+        <p class="last-update">
+            Última atualização:
+            <span id="lastUpdate">--</span>
+        </p>
+
+    </section>
+
+    <section class="panel">
+
+        <h2>⚔ Jogadores conectados</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do jogador</th>
+                        <th>Nível</th>
+                    </tr>
+                </thead>
+
+                <tbody id="playersList">
+                    <tr>
+                        <td colspan="2">Aguardando dados...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <section class="panel">
+
+        <h2>Resposta TCP (Hexadecimal)</h2>
+
+        <pre id="raw">Nenhum dado recebido.</pre>
+
+    </section>
+
+    <footer>
+        <p>PStory Monitor • Atualização automática a cada 5 minutos</p>
+        <p>Servidor: 160.202.130.101:7171</p>
+    </footer>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
